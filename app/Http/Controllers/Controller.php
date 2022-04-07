@@ -13,6 +13,6 @@ class Controller extends BaseController
 
     public function gettest()
     {
-        return 555;
+        return 1234;
     }
 }
