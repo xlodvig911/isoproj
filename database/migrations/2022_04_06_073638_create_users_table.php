@@ -20,9 +20,10 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->unsignedBigInteger('phone')->nullable();
-            $table->unsignedBigInteger('role_id');
+            $table->unsignedBigInteger('role_id')->default(4);
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
         });
     }

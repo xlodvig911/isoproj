@@ -20,8 +20,9 @@ return new class extends Migration
             $table->unsignedBigInteger('magazine_id');
             $table->unsignedBigInteger('department_id');
             $table->unsignedBigInteger('violation_id');
-            $table->string('comment')->nullable();
+            $table->text('comment')->nullable();
             $table->unsignedBigInteger('status_id');
+            $table->unsignedBigInteger('operation_response');
             $table->text('logs')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
